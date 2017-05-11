@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D87CB7931EC4071A00EB71AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7921EC4071A00EB71AF /* main.m */; };
-		D87CB7961EC4071A00EB71AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7951EC4071A00EB71AF /* AppDelegate.m */; };
-		D87CB7991EC4071A00EB71AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7981EC4071A00EB71AF /* ViewController.m */; };
-		D87CB79C1EC4071A00EB71AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CB79A1EC4071A00EB71AF /* Main.storyboard */; };
-		D87CB79E1EC4071A00EB71AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87CB79D1EC4071A00EB71AF /* Assets.xcassets */; };
-		D87CB7A11EC4071A00EB71AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CB79F1EC4071A00EB71AF /* LaunchScreen.storyboard */; };
 		D87CB7AC1EC4071A00EB71AF /* MERNoticeBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */; };
 		D87CB7B71EC4071A00EB71AF /* MERNoticeBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7B61EC4071A00EB71AF /* MERNoticeBarUITests.m */; };
+		D87CB7C71EC407EE00EB71AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7C61EC407EE00EB71AF /* main.m */; };
+		D87CB7CA1EC4081000EB71AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7C91EC4081000EB71AF /* AppDelegate.m */; };
+		D87CB7CC1EC4081800EB71AF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7CB1EC4081800EB71AF /* Info.plist */; };
+		D87CB7CF1EC4082000EB71AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7CE1EC4082000EB71AF /* ViewController.m */; };
+		D87CB7D41EC4082700EB71AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7D01EC4082700EB71AF /* LaunchScreen.storyboard */; };
+		D87CB7D51EC4082700EB71AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7D21EC4082700EB71AF /* Main.storyboard */; };
+		D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7D61EC4083500EB71AF /* Assets.xcassets */; };
+		D87CB7DA1EC408A100EB71AF /* MERNoticeBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7D91EC408A100EB71AF /* MERNoticeBarConfig.m */; };
+		D87CB7DE1EC410FD00EB71AF /* MERNoticeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7DD1EC410FD00EB71AF /* MERNoticeBar.m */; };
+		D87CB7E01EC413E300EB71AF /* MERNoticeBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +40,27 @@
 
 /* Begin PBXFileReference section */
 		D87CB78E1EC4071A00EB71AF /* MERNoticeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MERNoticeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D87CB7921EC4071A00EB71AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D87CB7941EC4071A00EB71AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D87CB7951EC4071A00EB71AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D87CB7971EC4071A00EB71AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D87CB7981EC4071A00EB71AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D87CB79B1EC4071A00EB71AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D87CB79D1EC4071A00EB71AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D87CB7A01EC4071A00EB71AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D87CB7A21EC4071A00EB71AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87CB7A71EC4071A00EB71AF /* MERNoticeBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MERNoticeBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBarTests.m; sourceTree = "<group>"; };
 		D87CB7AD1EC4071A00EB71AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87CB7B21EC4071A00EB71AF /* MERNoticeBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MERNoticeBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7B61EC4071A00EB71AF /* MERNoticeBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBarUITests.m; sourceTree = "<group>"; };
 		D87CB7B81EC4071A00EB71AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87CB7C61EC407EE00EB71AF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo/main.m; sourceTree = "<group>"; };
+		D87CB7C81EC4081000EB71AF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D87CB7C91EC4081000EB71AF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D87CB7CB1EC4081800EB71AF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87CB7CD1EC4082000EB71AF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D87CB7CE1EC4082000EB71AF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D87CB7D11EC4082700EB71AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D87CB7D31EC4082700EB71AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D87CB7D61EC4083500EB71AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D87CB7D81EC408A100EB71AF /* MERNoticeBarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERNoticeBarConfig.h; sourceTree = "<group>"; };
+		D87CB7D91EC408A100EB71AF /* MERNoticeBarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBarConfig.m; sourceTree = "<group>"; };
+		D87CB7DB1EC408C500EB71AF /* MERNoticeBarEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MERNoticeBarEnum.h; sourceTree = "<group>"; };
+		D87CB7DC1EC410FD00EB71AF /* MERNoticeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERNoticeBar.h; sourceTree = "<group>"; };
+		D87CB7DD1EC410FD00EB71AF /* MERNoticeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBar.m; sourceTree = "<group>"; };
+		D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MERNoticeBar.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,8 @@
 		D87CB7901EC4071A00EB71AF /* MERNoticeBar */ = {
 			isa = PBXGroup;
 			children = (
-				D87CB7941EC4071A00EB71AF /* AppDelegate.h */,
-				D87CB7951EC4071A00EB71AF /* AppDelegate.m */,
-				D87CB7971EC4071A00EB71AF /* ViewController.h */,
-				D87CB7981EC4071A00EB71AF /* ViewController.m */,
-				D87CB79A1EC4071A00EB71AF /* Main.storyboard */,
-				D87CB79D1EC4071A00EB71AF /* Assets.xcassets */,
-				D87CB79F1EC4071A00EB71AF /* LaunchScreen.storyboard */,
-				D87CB7A21EC4071A00EB71AF /* Info.plist */,
+				D87CB7C51EC4079100EB71AF /* NoticeBar */,
+				D87CB7C41EC4078B00EB71AF /* Demo */,
 				D87CB7911EC4071A00EB71AF /* Supporting Files */,
 			);
 			path = MERNoticeBar;
@@ -117,7 +121,7 @@
 		D87CB7911EC4071A00EB71AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D87CB7921EC4071A00EB71AF /* main.m */,
+				D87CB7C61EC407EE00EB71AF /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +142,34 @@
 				D87CB7B81EC4071A00EB71AF /* Info.plist */,
 			);
 			path = MERNoticeBarUITests;
+			sourceTree = "<group>";
+		};
+		D87CB7C41EC4078B00EB71AF /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D87CB7C81EC4081000EB71AF /* AppDelegate.h */,
+				D87CB7C91EC4081000EB71AF /* AppDelegate.m */,
+				D87CB7CD1EC4082000EB71AF /* ViewController.h */,
+				D87CB7CE1EC4082000EB71AF /* ViewController.m */,
+				D87CB7CB1EC4081800EB71AF /* Info.plist */,
+				D87CB7D01EC4082700EB71AF /* LaunchScreen.storyboard */,
+				D87CB7D21EC4082700EB71AF /* Main.storyboard */,
+				D87CB7D61EC4083500EB71AF /* Assets.xcassets */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		D87CB7C51EC4079100EB71AF /* NoticeBar */ = {
+			isa = PBXGroup;
+			children = (
+				D87CB7DC1EC410FD00EB71AF /* MERNoticeBar.h */,
+				D87CB7DD1EC410FD00EB71AF /* MERNoticeBar.m */,
+				D87CB7DB1EC408C500EB71AF /* MERNoticeBarEnum.h */,
+				D87CB7D81EC408A100EB71AF /* MERNoticeBarConfig.h */,
+				D87CB7D91EC408A100EB71AF /* MERNoticeBarConfig.m */,
+				D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */,
+			);
+			path = NoticeBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87CB7A11EC4071A00EB71AF /* LaunchScreen.storyboard in Resources */,
-				D87CB79E1EC4071A00EB71AF /* Assets.xcassets in Resources */,
-				D87CB79C1EC4071A00EB71AF /* Main.storyboard in Resources */,
+				D87CB7D51EC4082700EB71AF /* Main.storyboard in Resources */,
+				D87CB7CC1EC4081800EB71AF /* Info.plist in Resources */,
+				D87CB7E01EC413E300EB71AF /* MERNoticeBar.xcassets in Resources */,
+				D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */,
+				D87CB7D41EC4082700EB71AF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87CB7991EC4071A00EB71AF /* ViewController.m in Sources */,
-				D87CB7961EC4071A00EB71AF /* AppDelegate.m in Sources */,
-				D87CB7931EC4071A00EB71AF /* main.m in Sources */,
+				D87CB7DA1EC408A100EB71AF /* MERNoticeBarConfig.m in Sources */,
+				D87CB7CF1EC4082000EB71AF /* ViewController.m in Sources */,
+				D87CB7DE1EC410FD00EB71AF /* MERNoticeBar.m in Sources */,
+				D87CB7CA1EC4081000EB71AF /* AppDelegate.m in Sources */,
+				D87CB7C71EC407EE00EB71AF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,20 +350,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D87CB79A1EC4071A00EB71AF /* Main.storyboard */ = {
+		D87CB7D01EC4082700EB71AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D87CB79B1EC4071A00EB71AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D87CB79F1EC4071A00EB71AF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D87CB7A01EC4071A00EB71AF /* Base */,
+				D87CB7D11EC4082700EB71AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D87CB7D21EC4082700EB71AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D87CB7D31EC4082700EB71AF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,7 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F692N24C9P;
-				INFOPLIST_FILE = MERNoticeBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MERNoticeBar/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mervin1024.MERNoticeBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,7 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F692N24C9P;
-				INFOPLIST_FILE = MERNoticeBar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MERNoticeBar/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mervin1024.MERNoticeBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
