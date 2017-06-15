@@ -79,14 +79,12 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
 #pragma mark - Public
 
 - (void)showAnimationCompleted:(noticeBarCompleted)completed {
-    [self showWithDuration:0.8 completed:completed];
+    [self showWithDuration:0.7 completed:completed];
 }
 
 - (void)showWithDuration:(NSTimeInterval)duration completed:(noticeBarCompleted)completed {
     UIStatusBarStyle appStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
-//    __weak typeof(&*self)weakSelf = self;
     [self showWithDuration:duration willShow:^{
-//        __strong typeof(&*weakSelf)strongSelf = weakSelf;
         UIWindowLevel currentWindowLevel = self.config.beginWindowLevel;
         [UIApplication sharedApplication].keyWindow.windowLevel = currentWindowLevel;
         UIStatusBarStyle currentStatusBarStyle = [self.config statusStylesChangesByCurrentStatus:appStatusBarStyle].begin;
@@ -117,7 +115,7 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
     willShow();
     [keyWindow addSubview:self];
     self.transform = [_config noticeBarViewTransformWithFrame:self.frame];
-    [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.58 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.65 delay:0.0 usingSpringWithDamping:0.58 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         if (finished) {
@@ -126,7 +124,7 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
             dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, duration * NSEC_PER_SEC);
             dispatch_after(delayTime, afterQueue, ^{
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [UIView animateWithDuration:0.3 animations:^{
+                    [UIView animateWithDuration:0.35 animations:^{
                         self.transform = [self.config noticeBarViewTransformWithFrame:self.frame];
                     } completion:^(BOOL finished) {
                         completed(finished);
