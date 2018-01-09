@@ -12,6 +12,7 @@
 #define MERDefaultBackgroundColor           [UIColor whiteColor]
 #define MERDefaultNoticeBarStyle            0
 #define MERDefaultNoticeBarAnimationType    0
+#define MERNoticeBarFrameOffset             50
 
 @implementation MERNoticeBarConfig
 
@@ -59,34 +60,37 @@
 
 - (MERNoticeBarProperties)barProperties {
     MERNoticeBarProperties properties;
+
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat navigationAndStatusHeight = 64;
-    CGFloat tabbarHeight = 49;
-    CGFloat statusBarHeight = 20;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    BOOL isiPhoneX = (screenWidth == 375 && screenHeight == 812 ? YES : NO);
+    CGFloat statusBarHeight = isiPhoneX ? 44 : 20;
+    CGFloat navigationAndStatusHeight = statusBarHeight + 44;
+    CGFloat tabbarHeight = isiPhoneX ? (49 + 34) : 49;
     switch (self.barStyle) {
         case MERNoticeBarStyleOnNavigationBar:
             properties.shadowOffSetY = 0.5;
             properties.fontSizeScaleFactor = 0.55;
             properties.textFont = [UIFont systemFontOfSize:16];
-            properties.viewFrame = CGRectMake(0, -20, screenWidth, navigationAndStatusHeight+20);
+            properties.viewFrame = CGRectMake(-MERNoticeBarFrameOffset, -MERNoticeBarFrameOffset, screenWidth+MERNoticeBarFrameOffset*2, navigationAndStatusHeight+MERNoticeBarFrameOffset);
             break;
         case MERNoticeBarStyleOnStatusBar:
             properties.shadowOffSetY = 0.5;
             properties.fontSizeScaleFactor = 0.75;
             properties.textFont = [UIFont systemFontOfSize:11];
-            properties.viewFrame = CGRectMake(0, -20, screenWidth, statusBarHeight+20);
+            properties.viewFrame = CGRectMake(-MERNoticeBarFrameOffset, -MERNoticeBarFrameOffset, screenWidth+MERNoticeBarFrameOffset*2, statusBarHeight+MERNoticeBarFrameOffset);
             break;
         case MERNoticeBarStyleOnTabbar:
             properties.shadowOffSetY = -0.5;
             properties.fontSizeScaleFactor = 0.55;
             properties.textFont = [UIFont systemFontOfSize:15];
-            properties.viewFrame = CGRectMake(0, screenWidth - tabbarHeight + 20, screenWidth, tabbarHeight+20);
+            properties.viewFrame = CGRectMake(-MERNoticeBarFrameOffset, screenHeight - tabbarHeight, screenWidth+MERNoticeBarFrameOffset*2, tabbarHeight+MERNoticeBarFrameOffset);
             break;
         case MERNoticeBarStyleBelowStatusBar:
             properties.shadowOffSetY = 0.5;
             properties.fontSizeScaleFactor = 0.75;
             properties.textFont = [UIFont systemFontOfSize:11];
-            properties.viewFrame = CGRectMake(0, -20, screenWidth, statusBarHeight * 2+20);
+            properties.viewFrame = CGRectMake(-MERNoticeBarFrameOffset, -MERNoticeBarFrameOffset, screenWidth+MERNoticeBarFrameOffset*2, statusBarHeight * 2+MERNoticeBarFrameOffset);
             break;
     }
     return properties;
@@ -115,6 +119,7 @@
         _backgroundColor = MERDefaultBackgroundColor;
         _barStyle = MERDefaultNoticeBarStyle;
         _animationType = MERDefaultNoticeBarAnimationType;
+        _margin = MERNoticeBarFrameOffset;
     }
     
     return self;
@@ -196,29 +201,29 @@
     switch (self.animationType) {
         case MERNoticeBarAnimationTypeTop: {
             if (self.barStyle == MERNoticeBarStyleOnTabbar) {
-                transform = CGAffineTransformMakeTranslation(0, frame.size.height-20);
+                transform = CGAffineTransformMakeTranslation(0, frame.size.height-MERNoticeBarFrameOffset);
             } else {
-                transform = CGAffineTransformMakeTranslation(0, -frame.size.height+20);
+                transform = CGAffineTransformMakeTranslation(0, -frame.size.height+MERNoticeBarFrameOffset);
             }
         }
             break;
             
         case MERNoticeBarAnimationTypeBottom: {
             if (self.barStyle == MERNoticeBarStyleOnTabbar) {
-                transform = CGAffineTransformMakeTranslation(0, frame.size.height-20);
+                transform = CGAffineTransformMakeTranslation(0, frame.size.height-MERNoticeBarFrameOffset);
             } else {
-                transform = CGAffineTransformMakeTranslation(0, -frame.size.height+20);
+                transform = CGAffineTransformMakeTranslation(0, -frame.size.height+MERNoticeBarFrameOffset);
             }
         }
             break;
             
         case MERNoticeBarAnimationTypeLeft: {
-            transform = CGAffineTransformMakeTranslation(-frame.size.width+20, 0);
+            transform = CGAffineTransformMakeTranslation(-frame.size.width+MERNoticeBarFrameOffset, 0);
         }
             break;
             
         case MERNoticeBarAnimationTypeRight: {
-            transform = CGAffineTransformMakeTranslation(frame.size.width-20, 0);
+            transform = CGAffineTransformMakeTranslation(frame.size.width-MERNoticeBarFrameOffset, 0);
         }
             break;
     }
@@ -229,16 +234,16 @@
     CGFloat y = 0;
     switch (self.barStyle) {
         case MERNoticeBarStyleOnNavigationBar:
-            y = (superViewHeight - 20 - imageHeight) * 0.5 + 10 + 20;
+            y = (superViewHeight - MERNoticeBarFrameOffset - imageHeight) * 0.5 + 10 + MERNoticeBarFrameOffset;
             break;
         case MERNoticeBarStyleOnStatusBar:
-            y = (superViewHeight - 20 - imageHeight) * 0.5 + 20;
+            y = (superViewHeight - MERNoticeBarFrameOffset - imageHeight) * 0.5 + MERNoticeBarFrameOffset;
             break;
         case MERNoticeBarStyleOnTabbar:
-            y = (superViewHeight - 20 - imageHeight) * 0.5 + 20;
+            y = (superViewHeight - MERNoticeBarFrameOffset - imageHeight) * 0.5;
             break;
         case MERNoticeBarStyleBelowStatusBar:
-            y = ((superViewHeight - 20) * 0.5 - imageHeight) * 0.5 + (superViewHeight - 20) * 0.5 + 20;
+            y = ((superViewHeight - MERNoticeBarFrameOffset) * 0.5 - imageHeight) * 0.5 + (superViewHeight - MERNoticeBarFrameOffset) * 0.5 + MERNoticeBarFrameOffset;
             break;
     }
     return y;
@@ -246,7 +251,11 @@
 
 - (MERStatusBarStylesChanges)statusStylesChangesByCurrentStatus:(UIStatusBarStyle)currentStatus{
     MERStatusBarStylesChanges changes;
-    
+    if (self.barStyle == MERNoticeBarStyleOnTabbar) {
+        changes.begin = currentStatus;
+        changes.end = currentStatus;
+        return changes;
+    }
     if (currentStatus == UIStatusBarStyleDefault) {
         switch (self.defaultType) {
             case MERNoticeBarDefaultTypeInfo: {

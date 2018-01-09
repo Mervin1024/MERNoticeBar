@@ -27,7 +27,7 @@
 @property (nonatomic, strong) UIImage *image;
 
 /**
- *   Margin around the noticeBar, default is 10.0f.
+ *   Margin around the noticeBar, default is 20.0f.
  */
 @property (nonatomic, assign) CGFloat margin;
 

@@ -9,6 +9,7 @@
 #import "MERNoticeBar.h"
 
 static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNoticeBar.MERNoticeBar";
+static UIStatusBarStyle appStatusBarStyle = 0;
 
 @implementation MERNoticeBar
 
@@ -72,9 +73,9 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
         CGFloat imageOriginY = [_config imageOriginYFromSuperViewHeight:CGRectGetHeight(self.bounds) imageHeight:imageWidth];
         [_imageView setFrame:CGRectMake(imageOriginX, imageOriginY, imageWidth, imageWidth)];
         
-        titleLabelOriginX = CGRectGetMaxX(_imageView.frame) + _config.margin + 10;
+        titleLabelOriginX = CGRectGetMaxX(_imageView.frame) + 10;
         titleLabelOriginY = CGRectGetMinY(_imageView.frame);
-        titleLabelWidth = screenWidth - titleLabelOriginX - _config.margin - 10;
+        titleLabelWidth = screenWidth - titleLabelOriginX - 10;
         titleLabelHeight = CGRectGetHeight(_imageView.frame);
         _titleLabel.textAlignment = NSTextAlignmentLeft;
     } else {
@@ -82,7 +83,7 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
         
         titleLabelHeight = 25;
         titleLabelWidth = screenWidth - _config.margin * 2;
-        titleLabelOriginX = _config.margin;
+        titleLabelOriginX = _config.margin*2;
         titleLabelOriginY = [_config imageOriginYFromSuperViewHeight:CGRectGetHeight(self.bounds) imageHeight:titleLabelHeight];
     }
     [_titleLabel setFrame:CGRectMake(titleLabelOriginX, titleLabelOriginY, titleLabelWidth, titleLabelHeight)];
@@ -95,26 +96,6 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
 }
 
 - (void)showWithDuration:(NSTimeInterval)duration completed:(NoticeBarCompletedBlock)completed {
-    UIStatusBarStyle appStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
-    [self showWithDuration:duration willShow:^{
-        UIWindowLevel currentWindowLevel = self.config.beginWindowLevel;
-        [UIApplication sharedApplication].keyWindow.windowLevel = currentWindowLevel;
-        UIStatusBarStyle currentStatusBarStyle = [self.config statusStylesChangesByCurrentStatus:appStatusBarStyle].begin;
-        [UIApplication sharedApplication].statusBarStyle = currentStatusBarStyle;
-    } completed:^(BOOL finished) {
-        if (completed) {
-            completed(finished);
-        }
-        if (finished) {
-            UIWindowLevel currentWindowLevel = self.config.endWindowLevel;
-            [UIApplication sharedApplication].keyWindow.windowLevel = currentWindowLevel;
-            UIStatusBarStyle currentStatusBarStyle = [self.config statusStylesChangesByCurrentStatus:appStatusBarStyle].end;
-            [UIApplication sharedApplication].statusBarStyle = currentStatusBarStyle;
-        }
-    }];
-}
-
-- (void)showWithDuration:(NSTimeInterval)duration willShow:(void(^)(void))willShow completed:(NoticeBarCompletedBlock)completed {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     NSArray *subviews = keyWindow.subviews;
     if (subviews.count > 0) {
@@ -124,6 +105,21 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
             }
         }
     }
+    appStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+    [self showWithDuration:duration willShow:^{
+        UIWindowLevel currentWindowLevel = self.config.beginWindowLevel;
+        [UIApplication sharedApplication].keyWindow.windowLevel = currentWindowLevel;
+        UIStatusBarStyle currentStatusBarStyle = [self.config statusStylesChangesByCurrentStatus:appStatusBarStyle].begin;
+        [UIApplication sharedApplication].statusBarStyle = currentStatusBarStyle;
+    } completed:^(BOOL finished) {
+        if (completed) {
+            completed(finished);
+        }
+    }];
+}
+
+- (void)showWithDuration:(NSTimeInterval)duration willShow:(void(^)(void))willShow completed:(NoticeBarCompletedBlock)completed {
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     willShow();
     [keyWindow addSubview:self];
     self.transform = [_config noticeBarViewTransformWithFrame:self.frame];
@@ -149,6 +145,17 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
             
         }
     }];
+}
+
+#pragma mark - Override
+
+- (void)removeFromSuperview {
+    UIWindowLevel currentWindowLevel = self.config.endWindowLevel;
+    [UIApplication sharedApplication].keyWindow.windowLevel = currentWindowLevel;
+    UIStatusBarStyle currentStatusBarStyle = [self.config statusStylesChangesByCurrentStatus:appStatusBarStyle].end;
+    [UIApplication sharedApplication].statusBarStyle = currentStatusBarStyle;
+    
+    [super removeFromSuperview];
 }
 
 @end

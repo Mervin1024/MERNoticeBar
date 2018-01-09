@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, MERNoticeBarDefaultType) {
 
 typedef NS_ENUM(NSUInteger, MERNoticeBarAnimationType) {
     MERNoticeBarAnimationTypeTop,
-    MERNoticeBarAnimationTypeBottom,
+    MERNoticeBarAnimationTypeBottom,    // Bottom 和 Top 动画形式相同，只跟 MERNoticeBarStyle == MERNoticeBarStyleOnTabbar 有关
     MERNoticeBarAnimationTypeLeft,
     MERNoticeBarAnimationTypeRight
 };
