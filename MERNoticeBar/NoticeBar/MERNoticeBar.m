@@ -8,7 +8,7 @@
 
 #import "MERNoticeBar.h"
 
-static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNoticeBar.MERNoticeBar";
+static NSString *const MERNoticeBarAfterQueueNameString = @"com.mervin1024.MERNoticeBar.MERNoticeBar";
 static UIStatusBarStyle appStatusBarStyle = 0;
 
 @implementation MERNoticeBar
