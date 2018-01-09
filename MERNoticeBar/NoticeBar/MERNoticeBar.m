@@ -14,6 +14,18 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
 
 #pragma mark - Initialization
 
++ (instancetype)showAnimationWithTitle:(NSString *)title defaultType:(MERNoticeBarDefaultType)defaultType completed:(NoticeBarCompletedBlock)completed {
+    MERNoticeBar *bar = [[self alloc] initWithTitle:title defaultType:defaultType];
+    [bar showAnimationCompleted:completed];
+    return bar;
+}
+
++ (instancetype)showAnimationWithConfig:(MERNoticeBarConfig *)config completed:(NoticeBarCompletedBlock)completed {
+    MERNoticeBar *bar = [[self alloc] initWithConfig:config];
+    [bar showAnimationCompleted:completed];
+    return bar;
+}
+
 - (instancetype)initWithTitle:(NSString *)title defaultType:(MERNoticeBarDefaultType)defaultType {
     MERNoticeBarConfig *config = [[MERNoticeBarConfig alloc] initWithDefaultType:defaultType];
     config.title = title;
@@ -78,11 +90,11 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
 
 #pragma mark - Public
 
-- (void)showAnimationCompleted:(noticeBarCompleted)completed {
+- (void)showAnimationCompleted:(NoticeBarCompletedBlock)completed {
     [self showWithDuration:0.7 completed:completed];
 }
 
-- (void)showWithDuration:(NSTimeInterval)duration completed:(noticeBarCompleted)completed {
+- (void)showWithDuration:(NSTimeInterval)duration completed:(NoticeBarCompletedBlock)completed {
     UIStatusBarStyle appStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
     [self showWithDuration:duration willShow:^{
         UIWindowLevel currentWindowLevel = self.config.beginWindowLevel;
@@ -102,7 +114,7 @@ static NSString *const MERNoticeBarAfterQueueNameString = @"con.mervin1024.MERNo
     }];
 }
 
-- (void)showWithDuration:(NSTimeInterval)duration willShow:(void(^)(void))willShow completed:(noticeBarCompleted)completed {
+- (void)showWithDuration:(NSTimeInterval)duration willShow:(void(^)(void))willShow completed:(NoticeBarCompletedBlock)completed {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     NSArray *subviews = keyWindow.subviews;
     if (subviews.count > 0) {

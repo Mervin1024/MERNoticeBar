@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MERNoticeBarConfig.h"
 
-typedef void(^noticeBarCompleted)(BOOL finished);
+typedef void(^NoticeBarCompletedBlock)(BOOL finished);
 
 @interface MERNoticeBar : UIView
 
@@ -17,10 +17,13 @@ typedef void(^noticeBarCompleted)(BOOL finished);
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *imageView;
 
++ (instancetype)showAnimationWithTitle:(NSString *)title defaultType:(MERNoticeBarDefaultType)defaultType completed:(NoticeBarCompletedBlock)completed;
++ (instancetype)showAnimationWithConfig:(MERNoticeBarConfig *)config completed:(NoticeBarCompletedBlock)completed;
+
 - (instancetype)initWithTitle:(NSString *)title defaultType:(MERNoticeBarDefaultType)defaultType;
 - (instancetype)initWithConfig:(MERNoticeBarConfig *)config;
 
-- (void)showAnimationCompleted:(noticeBarCompleted)completed;// default duration is 0.8s
-- (void)showWithDuration:(NSTimeInterval)duration completed:(noticeBarCompleted)completed;
+- (void)showAnimationCompleted:(NoticeBarCompletedBlock)completed;// default duration is 0.7s
+- (void)showWithDuration:(NSTimeInterval)duration completed:(NoticeBarCompletedBlock)completed;
 
 @end
