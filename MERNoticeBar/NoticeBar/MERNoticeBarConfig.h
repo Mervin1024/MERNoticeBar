@@ -11,7 +11,7 @@
 #import "MERNoticeBarEnum.h"
 
 /**
- NoticeBar 属性配置管理类
+ MERNoticeBar 属性配置管理类
  */
 @interface MERNoticeBarConfig : NSObject
 

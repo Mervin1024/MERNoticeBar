@@ -26,28 +26,28 @@
     
     switch (defaultType) {
         case MERNoticeBarDefaultTypeInfo: {
-            image = [UIImage imageNamed:@"notice_bar_info"];
+            image = [UIImage imageNamed:@"MERNoticeBar_info"];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeAttention: {
-            image = [UIImage imageNamed:@"notice_bar_attention"];
+            image = [UIImage imageNamed:@"MERNoticeBar_attention"];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor orangeColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeSuccess: {
-            image = [UIImage imageNamed:@"notice_bar_success"];
+            image = [UIImage imageNamed:@"MERNoticeBar_success"];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeError: {
-            image = [UIImage imageNamed:@"notice_bar_error"];
+            image = [UIImage imageNamed:@"MERNoticeBar_error"];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor colorWithRed:249/255.0 green:66/255.0 blue:47/255.0 alpha:1];
         }

@@ -11,6 +11,9 @@
 
 typedef void(^NoticeBarCompletedBlock)(BOOL finished);
 
+/**
+ MERNoticeBar 可自动消失的信息栏展示View
+ */
 @interface MERNoticeBar : UIView
 
 @property (nonatomic, readonly, strong) MERNoticeBarConfig *config;
