@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */; };
 		D87CB7AC1EC4071A00EB71AF /* MERNoticeBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */; };
 		D87CB7B71EC4071A00EB71AF /* MERNoticeBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7B61EC4071A00EB71AF /* MERNoticeBarUITests.m */; };
 		D87CB7C71EC407EE00EB71AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7C61EC407EE00EB71AF /* main.m */; };
@@ -18,7 +19,6 @@
 		D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7D61EC4083500EB71AF /* Assets.xcassets */; };
 		D87CB7DA1EC408A100EB71AF /* MERNoticeBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7D91EC408A100EB71AF /* MERNoticeBarConfig.m */; };
 		D87CB7DE1EC410FD00EB71AF /* MERNoticeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7DD1EC410FD00EB71AF /* MERNoticeBar.m */; };
-		D87CB7E01EC413E300EB71AF /* MERNoticeBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MERNoticeBar.bundle; sourceTree = "<group>"; };
 		D87CB78E1EC4071A00EB71AF /* MERNoticeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MERNoticeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7A71EC4071A00EB71AF /* MERNoticeBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MERNoticeBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBarTests.m; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		D87CB7DB1EC408C500EB71AF /* MERNoticeBarEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MERNoticeBarEnum.h; sourceTree = "<group>"; };
 		D87CB7DC1EC410FD00EB71AF /* MERNoticeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MERNoticeBar.h; sourceTree = "<group>"; };
 		D87CB7DD1EC410FD00EB71AF /* MERNoticeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBar.m; sourceTree = "<group>"; };
-		D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MERNoticeBar.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 				D87CB7DB1EC408C500EB71AF /* MERNoticeBarEnum.h */,
 				D87CB7D81EC408A100EB71AF /* MERNoticeBarConfig.h */,
 				D87CB7D91EC408A100EB71AF /* MERNoticeBarConfig.m */,
-				D87CB7DF1EC413E300EB71AF /* MERNoticeBar.xcassets */,
+				8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */,
 			);
 			path = NoticeBar;
 			sourceTree = "<group>";
@@ -281,9 +281,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */,
 				D87CB7D51EC4082700EB71AF /* Main.storyboard in Resources */,
 				D87CB7CC1EC4081800EB71AF /* Info.plist in Resources */,
-				D87CB7E01EC413E300EB71AF /* MERNoticeBar.xcassets in Resources */,
 				D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */,
 				D87CB7D41EC4082700EB71AF /* LaunchScreen.storyboard in Resources */,
 			);
@@ -554,6 +554,7 @@
 				D87CB7BD1EC4071A00EB71AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87CB7BE1EC4071A00EB71AF /* Build configuration list for PBXNativeTarget "MERNoticeBarTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +563,7 @@
 				D87CB7C01EC4071A00EB71AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87CB7C11EC4071A00EB71AF /* Build configuration list for PBXNativeTarget "MERNoticeBarUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +572,7 @@
 				D87CB7C31EC4071A00EB71AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

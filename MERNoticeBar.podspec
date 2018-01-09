@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Mervin1024/MERNoticeBar.git" }
 
   s.source_files  = "MERNoticeBar", "MERNoticeBar/NoticeBar/*.{h,m}"
-  s.resources = "MERNoticeBar/NoticeBar/*.xcassets"
+  s.resources = "MERNoticeBar/NoticeBar/*.bundle"
 
   s.framework  = "UIKit"
 

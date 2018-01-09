@@ -18,6 +18,14 @@
 
 #pragma mark - setter & getter
 
++ (NSBundle *)noticeBarBundle {
+    static NSBundle *noticeBarBundle = nil;
+    if (noticeBarBundle == nil) {
+        noticeBarBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"MERNoticeBar" ofType:@"bundle"]];
+    }
+    return noticeBarBundle;
+}
+
 - (void)setDefaultType:(MERNoticeBarDefaultType)defaultType {
     _defaultType = defaultType;
     UIImage *image;
@@ -26,28 +34,28 @@
     
     switch (defaultType) {
         case MERNoticeBarDefaultTypeInfo: {
-            image = [UIImage imageNamed:@"MERNoticeBar_info"];
+            image = [UIImage imageNamed:@"MERNoticeBar_info" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeAttention: {
-            image = [UIImage imageNamed:@"MERNoticeBar_attention"];
+            image = [UIImage imageNamed:@"MERNoticeBar_attention" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor orangeColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeSuccess: {
-            image = [UIImage imageNamed:@"MERNoticeBar_success"];
+            image = [UIImage imageNamed:@"MERNoticeBar_success" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeError: {
-            image = [UIImage imageNamed:@"MERNoticeBar_error"];
+            image = [UIImage imageNamed:@"MERNoticeBar_error" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor colorWithRed:249/255.0 green:66/255.0 blue:47/255.0 alpha:1];
         }
