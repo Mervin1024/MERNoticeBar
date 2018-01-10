@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */; };
+		8C4B1C782005C6C2002D75A4 /* MERNoticeBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */; };
 		D87CB7AC1EC4071A00EB71AF /* MERNoticeBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */; };
 		D87CB7B71EC4071A00EB71AF /* MERNoticeBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7B61EC4071A00EB71AF /* MERNoticeBarUITests.m */; };
 		D87CB7C71EC407EE00EB71AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7C61EC407EE00EB71AF /* main.m */; };
@@ -281,7 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */,
+				8C4B1C782005C6C2002D75A4 /* MERNoticeBar.bundle in Resources */,
 				D87CB7D51EC4082700EB71AF /* Main.storyboard in Resources */,
 				D87CB7CC1EC4081800EB71AF /* Info.plist in Resources */,
 				D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */,

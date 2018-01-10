@@ -21,7 +21,14 @@
 + (NSBundle *)noticeBarBundle {
     static NSBundle *noticeBarBundle = nil;
     if (noticeBarBundle == nil) {
-        noticeBarBundle = [NSBundle bundleForClass:[self class]];
+        noticeBarBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"MERNoticeBar" ofType:@"bundle"]];
+        if (!noticeBarBundle.isLoaded) {
+            NSError *error;
+            [noticeBarBundle loadAndReturnError:&error];
+            if (error) {
+                NSLog(@"%@", error.localizedDescription);
+            }
+        }
     }
     return noticeBarBundle;
 }
@@ -44,28 +51,28 @@
     
     switch (defaultType) {
         case MERNoticeBarDefaultTypeInfo: {
-            image = [UIImage imageNamed:@"MERNoticeBar_info" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
+            image = [UIImage imageWithContentsOfFile:[[[self class] noticeBarBundle] pathForResource:@"notice_bar_info@2x" ofType:@"png"]];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeAttention: {
-            image = [UIImage imageNamed:@"MERNoticeBar_attention" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
+            image = [UIImage imageWithContentsOfFile:[[[self class] noticeBarBundle] pathForResource:@"notice_bar_attention@2x" ofType:@"png"]];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor orangeColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeSuccess: {
-            image = [UIImage imageNamed:@"MERNoticeBar_success" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
+            image = [UIImage imageWithContentsOfFile:[[[self class] noticeBarBundle] pathForResource:@"notice_bar_success@2x" ofType:@"png"]];
             textColor = [UIColor blackColor];
             backgroundColor = [UIColor whiteColor];
         }
             break;
             
         case MERNoticeBarDefaultTypeError: {
-            image = [UIImage imageNamed:@"MERNoticeBar_error" inBundle:[[self class] noticeBarBundle] compatibleWithTraitCollection:nil];
+            image = [UIImage imageWithContentsOfFile:[[[self class] noticeBarBundle] pathForResource:@"notice_bar_error@2x" ofType:@"png"]];
             textColor = [UIColor whiteColor];
             backgroundColor = [UIColor colorWithRed:249/255.0 green:66/255.0 blue:47/255.0 alpha:1];
         }
