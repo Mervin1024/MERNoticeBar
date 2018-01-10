@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "A simple NoticeBar that can automatically disappear with animation."
   s.description  = <<-DESC
-                   A simple NoticeBar that can automatically disappear with animation.
+                   A NoticeBar similar with QQ Navigationbar notice view,written by Objective-C.
                    DESC
 
   s.homepage     = "https://github.com/Mervin1024/MERNoticeBar"
