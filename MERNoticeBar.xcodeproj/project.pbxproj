@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */; };
-		8C4B1C752005B402002D75A4 /* notice_bar_iPhoneX.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C742005B402002D75A4 /* notice_bar_iPhoneX.gif */; };
-		8C4B1C772005B490002D75A4 /* notice_bar_iPhone6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B1C762005B490002D75A4 /* notice_bar_iPhone6.gif */; };
 		D87CB7AC1EC4071A00EB71AF /* MERNoticeBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */; };
 		D87CB7B71EC4071A00EB71AF /* MERNoticeBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7B61EC4071A00EB71AF /* MERNoticeBarUITests.m */; };
 		D87CB7C71EC407EE00EB71AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87CB7C61EC407EE00EB71AF /* main.m */; };
@@ -42,8 +40,6 @@
 
 /* Begin PBXFileReference section */
 		8C4B1C6F2004B03A002D75A4 /* MERNoticeBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MERNoticeBar.bundle; sourceTree = "<group>"; };
-		8C4B1C742005B402002D75A4 /* notice_bar_iPhoneX.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = notice_bar_iPhoneX.gif; sourceTree = "<group>"; };
-		8C4B1C762005B490002D75A4 /* notice_bar_iPhone6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = notice_bar_iPhone6.gif; sourceTree = "<group>"; };
 		D87CB78E1EC4071A00EB71AF /* MERNoticeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MERNoticeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7A71EC4071A00EB71AF /* MERNoticeBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MERNoticeBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CB7AB1EC4071A00EB71AF /* MERNoticeBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MERNoticeBarTests.m; sourceTree = "<group>"; };
@@ -92,15 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C4B1C712005AF69002D75A4 /* Rources */ = {
-			isa = PBXGroup;
-			children = (
-				8C4B1C762005B490002D75A4 /* notice_bar_iPhone6.gif */,
-				8C4B1C742005B402002D75A4 /* notice_bar_iPhoneX.gif */,
-			);
-			path = Rources;
-			sourceTree = "<group>";
-		};
 		D87CB7851EC4071A00EB71AF = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +111,6 @@
 		D87CB7901EC4071A00EB71AF /* MERNoticeBar */ = {
 			isa = PBXGroup;
 			children = (
-				8C4B1C712005AF69002D75A4 /* Rources */,
 				D87CB7C51EC4079100EB71AF /* NoticeBar */,
 				D87CB7C41EC4078B00EB71AF /* Demo */,
 				D87CB7911EC4071A00EB71AF /* Supporting Files */,
@@ -295,12 +281,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4B1C772005B490002D75A4 /* notice_bar_iPhone6.gif in Resources */,
 				8C4B1C702004B03A002D75A4 /* MERNoticeBar.bundle in Resources */,
 				D87CB7D51EC4082700EB71AF /* Main.storyboard in Resources */,
 				D87CB7CC1EC4081800EB71AF /* Info.plist in Resources */,
 				D87CB7D71EC4083500EB71AF /* Assets.xcassets in Resources */,
-				8C4B1C752005B402002D75A4 /* notice_bar_iPhoneX.gif in Resources */,
 				D87CB7D41EC4082700EB71AF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

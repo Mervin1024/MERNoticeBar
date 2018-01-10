@@ -4,8 +4,8 @@ A NoticeBar similar with QQ Navigationbar notice view,written by Objective-C.
 ScreenShots
 ===
 
-![iPhone6s](Rources/notice_bar_iPhone6.gif)&nbsp;&nbsp;
-![iPhoneX](Rources/notice_bar_iPhoneX.gif)&nbsp;&nbsp;</p>
+<p><img src="https://github.com/Mervin1024/MERNoticeBar/blob/master/Rources/notice_bar_iPhone6.gif?raw=true" width="20%" height="20%">
+<img src="https://github.com/Mervin1024/MERNoticeBar/blob/master/Rources/notice_bar_iPhoneX.gif?raw=true" width="20%" height="20%"></p>
 tips : Please set the "View controller-based status bar appearance" to "NO" in the "info.plist",otherwise the status bar style can not be changed.
 
 Another 'NoticeBar' project by swift
@@ -15,7 +15,9 @@ At first I find the [NoticeBar](https://github.com/qiuncheng/NoticeBar) project 
 
 Support
 ===
+
 Objective-C & iOS 8+
+
 Installation
 ===
 #### CocoaPods
@@ -29,7 +31,8 @@ Installation
 
 Example
 ===
-###Default type
+#### Default type
+
 
 How to use? For example: -> `MERNoticeBarDefaultTypeSuccess`:
 ```
@@ -39,7 +42,8 @@ How to use? For example: -> `MERNoticeBarDefaultTypeSuccess`:
                 // completed
  }];
 ```
-###Custom
+#### Custom
+
 Also you can custom `MERNoticeBarConfig`
 
 
