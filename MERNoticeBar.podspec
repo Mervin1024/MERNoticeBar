@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Mervin1024/MERNoticeBar"
   s.license      = "MIT"
   s.author             = { "马遥" => "mervin1024@163.com" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/Mervin1024/MERNoticeBar.git" }
 
   s.source_files  = "MERNoticeBar", "MERNoticeBar/NoticeBar/*.{h,m}"

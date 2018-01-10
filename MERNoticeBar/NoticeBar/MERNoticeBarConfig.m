@@ -26,6 +26,16 @@
     return noticeBarBundle;
 }
 
+- (void)setBarStyle:(MERNoticeBarStyle)barStyle {
+    BOOL isiPhoneX = ([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812 ? YES : NO);
+    if (isiPhoneX) {
+        if (barStyle != MERNoticeBarStyleOnTabbar) {
+            barStyle = MERNoticeBarStyleOnNavigationBar;
+        }
+    }
+    _barStyle = barStyle;
+}
+
 - (void)setDefaultType:(MERNoticeBarDefaultType)defaultType {
     _defaultType = defaultType;
     UIImage *image;
@@ -75,6 +85,7 @@
     CGFloat statusBarHeight = isiPhoneX ? 44 : 20;
     CGFloat navigationAndStatusHeight = statusBarHeight + 44;
     CGFloat tabbarHeight = isiPhoneX ? (49 + 34) : 49;
+    
     switch (self.barStyle) {
         case MERNoticeBarStyleOnNavigationBar:
             properties.shadowOffSetY = 0.5;
@@ -240,6 +251,15 @@
 
 - (CGFloat)imageOriginYFromSuperViewHeight:(CGFloat)superViewHeight imageHeight:(CGFloat)imageHeight {
     CGFloat y = 0;
+    BOOL isiPhoneX = ([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812 ? YES : NO);
+    if (isiPhoneX) {
+        if (self.barStyle != MERNoticeBarStyleOnTabbar) {
+            superViewHeight -= 22;
+        } else {
+            superViewHeight -= 34;
+        }
+    }
+
     switch (self.barStyle) {
         case MERNoticeBarStyleOnNavigationBar:
             y = (superViewHeight - MERNoticeBarFrameOffset - imageHeight) * 0.5 + 10 + MERNoticeBarFrameOffset;
