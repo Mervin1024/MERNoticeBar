@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "马遥" => "mervin1024@163.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/Mervin1024/MERNoticeBar.git" }
+  s.source       = { :git => "https://github.com/Mervin1024/MERNoticeBar.git",:tag => "0.0.1" }
 
   s.source_files  = "MERNoticeBar", "MERNoticeBar/NoticeBar/*.{h,m}"
   s.resources = "MERNoticeBar/NoticeBar/*.bundle"
