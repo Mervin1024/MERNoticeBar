@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, MERNoticeBarAnimationType) {
 
 typedef NS_ENUM(NSUInteger, MERNoticeBarStyle) {
     MERNoticeBarStyleOnNavigationBar,
-    MERNoticeBarStyleBelowStatusBar,
+    MERNoticeBarStyleBelowStatusBar,    // 由于 iPhone X 的刘海儿，前三种在 iPhone X 下样式均以 OnNavigationBar 为准
     MERNoticeBarStyleOnStatusBar,
     MERNoticeBarStyleOnTabbar
 };

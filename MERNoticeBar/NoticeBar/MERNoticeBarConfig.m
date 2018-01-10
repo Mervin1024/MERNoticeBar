@@ -254,7 +254,7 @@
     BOOL isiPhoneX = ([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812 ? YES : NO);
     if (isiPhoneX) {
         if (self.barStyle != MERNoticeBarStyleOnTabbar) {
-            superViewHeight -= 22;
+            superViewHeight += 22;
         } else {
             superViewHeight -= 34;
         }
