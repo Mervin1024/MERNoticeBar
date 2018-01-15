@@ -10,7 +10,7 @@
 
 另一个使用 Swift 编写的相似项目 'NoticeBar'
 ===
-一开始我找到了 [@qiuncheng](https://github.com/qiuncheng) 所写的项目 [NoticeBar](https://github.com/qiuncheng/NoticeBar) , 但是这个项目仅支持 `swift`。所以我参照 `NoticeBar`项目仿写了个`Objective-C`版本的。完成后我又根据自己实际的需求进行了部分的改动，加入了自己的一点想法。<p>
+一开始我找到了 [@qiuncheng](https://github.com/qiuncheng) 所写的项目 [NoticeBar](https://github.com/qiuncheng/NoticeBar) , 但是这个项目仅支持 `swift`，不太满足于我当时的项目需求。所以我就参照 `NoticeBar`这个项目仿写了个`Objective-C`版本的。完成后我又根据自己实际的需求进行了部分的改动，加入了自己的一点想法。<p>
 **如果你需要`Swift`版本的项目代码 , 你可以试试 [`NoticeBar`](https://github.com/qiuncheng/NoticeBar)**
 
 支持
@@ -48,14 +48,15 @@ Objective-C & iOS 8+
 你也可以自定义 `MERNoticeBarConfig`
 
 
+
 ```
 
 MERNoticeBarConfig *config = [[MERNoticeBarConfig alloc] initWithTitle:(NSString *)
-image:(UIImage *)
-textColor:(UIColor *)
-backgroundColor:(UIColor *)
-barStyle:(MERNoticeBarStyle)
-animationType:(MERNoticeBarAnimationType)];
+                                                                     image:(UIImage *)
+                                                                 textColor:(UIColor *)
+                                                           backgroundColor:(UIColor *)
+                                                                  barStyle:(MERNoticeBarStyle)
+                                                             animationType:(MERNoticeBarAnimationType)];
 [MERNoticeBar showAnimationWithConfig:config completed:nil];
 
 ```
