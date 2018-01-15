@@ -22,13 +22,6 @@
     static NSBundle *noticeBarBundle = nil;
     if (noticeBarBundle == nil) {
         noticeBarBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"MERNoticeBar" ofType:@"bundle"]];
-        if (!noticeBarBundle.isLoaded) {
-            NSError *error;
-            [noticeBarBundle loadAndReturnError:&error];
-            if (error) {
-                NSLog(@"%@", error.localizedDescription);
-            }
-        }
     }
     return noticeBarBundle;
 }
