@@ -1,5 +1,8 @@
 # MERNoticeBar
 A NoticeBar similar with QQ Navigationbar notice view,written by Objective-C.
+一个风格类似于 QQ 的顶部导航栏信息提醒 view，使用 Objective-C 语言。
+
+[中文说明](https://github.com/Mervin1024/MERNoticeBar/blob/master/README-zh-CN.md)
 
 ScreenShots
 ===
@@ -66,10 +69,9 @@ ToDo
 
 Contact
 ===
-If you have a new idea about this project, [Please let me know.](mailto:mervin1024@163.com) OR pull request.<p>
+If you have a new idea about this project, [Please let me know.](mailto:mervin931208@gmail.com) OR pull request.<p>
 
 - Email: mervin931208@gmail.com
-- Email: mervin1024@163.com
 
 
 License
