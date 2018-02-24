@@ -22,6 +22,9 @@
     static NSBundle *noticeBarBundle = nil;
     if (noticeBarBundle == nil) {
         noticeBarBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"MERNoticeBar" ofType:@"bundle"]];
+        if (noticeBarBundle == nil) {
+            return [NSBundle bundleForClass:[self class]];
+        }
     }
     return noticeBarBundle;
 }
