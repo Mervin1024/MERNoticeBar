@@ -13,6 +13,7 @@ tips : Please set the "View controller-based status bar appearance" to "NO" in t
 
 Another 'NoticeBar' project by swift
 ===
+Thanks so much for [@qiuncheng](https://github.com/qiuncheng)'s thinking.
 At first I find the [NoticeBar](https://github.com/qiuncheng/NoticeBar) project by [@qiuncheng](https://github.com/qiuncheng) , but it just support `swift`.So I wrote this Objective-C version according to `NoticeBar`.After that I added some of my own ideas in this project.<p>
 **If you want a swift version , you can try the [`NoticeBar`](https://github.com/qiuncheng/NoticeBar)**
 
